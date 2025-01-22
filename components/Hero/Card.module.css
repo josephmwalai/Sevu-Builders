@@ -1,0 +1,135 @@
+.group {
+  position: relative;
+  width: 16rem; /* 64 */
+  height: 20rem; /* 96 */
+  border-radius: 2rem; /* rounded-xl */
+  overflow: hidden;
+  transition: transform 0.7s;
+}
+
+.group:hover {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.bgCover {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.7s ease-in-out;
+  opacity: 1;
+}
+
+.bgCoverSecond {
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out;
+  transition-delay: 0.2s; /* Second image fades in after 200ms */
+}
+
+.bgCoverThird {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  transition-delay: 1s; /* Third image fades in after 1 second */
+}
+
+.group:hover .bgCover {
+  opacity: 0;
+}
+
+.group:hover .bgCoverSecond {
+  opacity: 1;
+}
+
+.group:hover .bgCoverThird {
+  opacity: 1;
+}
+
+.gradientOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, black, rgba(0, 0, 0, 0.7), transparent);
+}
+
+.title {
+  position: absolute;
+  bottom: 1rem; /* 4 */
+  left: 1rem; /* 4 */
+  font-size: 1.2rem; /* text-xl */
+  font-weight: bold;
+  color: white;
+  opacity: 1;
+  transition: all 0.7s ease-in-out;
+  transition-delay: 0.3s;
+  z-index: 20;
+}
+
+.group:hover .title {
+  top: 1rem; /* 4 */
+  left: 1rem; /* 4 */
+  bottom: auto;
+  opacity: 1;
+}
+
+.hoverContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem; /* 4 */
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out;
+}
+
+.group:hover .hoverContent {
+  opacity: 1;
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem; /* px-2 py-1 */
+  font-size: 0.75rem; /* text-xs */
+  font-weight: 600;
+  background-color: #10b981; /* bg-green-500 */
+  color: white;
+  border-radius: 9999px; /* rounded-full */
+  margin-bottom: 0.5rem; /* mb-2 */
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem; /* space-x-1 */
+}
+
+.description {
+  font-size: 0.875rem; /* text-sm */
+  color: #e5e7eb; /* text-gray-200 */
+}
+
+.actionButton {
+  width: 100%;
+  padding: 0.5rem 1rem; /* px-4 py-2 */
+  margin-top: 0.5rem; /* mt-2 */
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 600;
+  color: white;
+  background-color: #2563eb; /* bg-blue-600 */
+  border-radius: 0.5rem; /* rounded-lg */
+  transition: background-color 0.3s;
+}
+
+.actionButton:hover {
+  background-color: #1e40af; /* bg-blue-700 */
+}
+
+.titleLetter {
+  display: inline-block;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.group:hover .titleLetter {
+  opacity: 1;
+  transform: translateY(0);
+}

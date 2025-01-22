@@ -1,0 +1,104 @@
+Container for the whole header
+.header {
+  background-color: black; /* Black background */
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Stacks elements vertically */
+}
+
+/* Main container that holds social and contact info */
+.maint {
+  display: flex;
+  justify-content: space-between; /* Space items evenly */
+  align-items: center; /* Center vertically */
+  width: 100%;
+  max-width: 1200px; /* Prevent content from stretching too wide */
+  margin: 0 auto; /* Center the content horizontally */
+  padding: 0 2rem; /* Add padding around content */
+}
+
+/* Add spacing between child components inside maint */
+.maint > * {
+  margin: 0 1rem; /* Uniform margin between child elements */
+}
+
+/* Responsive styles for screens 1024px and below */
+@media (max-width: 1024px) {
+  .maint {
+    padding: 0 1rem; /* Adjust padding */
+    max-width: 100%; /* Allow full width */
+  }
+
+  .maint > * {
+    margin: 0 0.5rem; /* Reduce spacing on smaller screens */
+  }
+}
+
+/* For screens 768px and below */
+@media (max-width: 768px) {
+  .maint {
+    flex-wrap: wrap; /* Stack items vertically if necessary */
+    justify-content: center; /* Center-align items */
+  }
+
+  .maint > * {
+    margin: 0.5rem 0; /* Add spacing between stacked items */
+  }
+}
+
+/* For large screens (min-width: 1200px) */
+@media (min-width: 1200px) {
+  .maint {
+    max-width: 1200px; /* Prevent stretching beyond 1200px */
+  }
+}
+
+/* Specific styles for social links and contact info */
+.socialLinks,
+.contactInfo {
+  display: flex;
+  gap: 1.5rem; /* Space between items */
+  align-items: center; /* Vertical alignment */
+}
+
+.socialLinks p,
+.contactInfo p {
+  display: inline-flex; /* Horizontal layout of icon and text */
+  align-items: center; /* Center-align text and icon */
+  color: white; /* Text color is white */
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.contactInfo a,
+.socialLinks a {
+  text-decoration: none; /* Remove underline */
+  color: white; /* Link color */
+}
+
+/* Icon sizes and spacing */
+.icon {
+  margin-right: 0.5rem; /* Space between icon and text */
+  font-size: 1.5rem; /* Icon size */
+}
+
+/* Custom colors for each social media icon */
+.icon-facebook {
+  color: #1877f2; /* Facebook blue */
+}
+
+.icon-instagram {
+  color: #e4405f; /* Instagram pink */
+}
+
+.icon-tiktok {
+  color: #000000; /* TikTok black */
+}
+
+.icon-mail {
+  color: white; /* Mail icon in white */
+}
+
+.icon-phone {
+  color: #25d366; /* WhatsApp/Call icon in green */
+}

@@ -1,0 +1,36 @@
+/* Popup.module.css */
+.dropdown {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 100%; /* Position the dropdown below the user section */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1010; /* Ensure the dropdown is above other content */
+    width: 200px; /* Set a fixed width for the dropdown */
+    margin-top: 8px; /* Space between the user section and the dropdown */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  }
+  
+  .menuList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menuItem {
+    padding: 10px;
+    cursor: pointer;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .menuItem:hover {
+    background-color: #f4f4f4;
+  }
+  
+  .menuItem:last-child {
+    border-bottom: none;
+  }
+  

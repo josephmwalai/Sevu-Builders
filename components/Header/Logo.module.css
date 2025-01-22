@@ -1,0 +1,18 @@
+.logoContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: auto;  /* Set the desired width of the logo */
+    height: auto;  /* Maintain the aspect ratio of the logo */
+  }
+  
+  .text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  

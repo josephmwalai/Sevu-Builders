@@ -1,0 +1,80 @@
+/* Style for the slider component container */
+.house-build-slider {
+  text-align: center;
+  padding: 0; /* Remove internal padding */
+  background: none; /* Remove background */
+  border: none; /* Remove border */
+  box-shadow: none; /* Remove shadow */
+}
+
+/* Style for the paragraph */
+.house-build-slider p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Style for the slider label */
+.slider-container label {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Style for the slider input */
+.slider {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 10px;
+  background: #ff3b3b;
+  border-radius: 5px;
+  outline: none;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.slider:hover {
+  background: #ff6666;
+}
+
+/* Slider knob */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(145deg, #d3d3d3, #c0c0c0);
+  border: 2px solid #999;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.slider:active::-webkit-slider-thumb {
+  transform: scale(1.3);
+  background: linear-gradient(145deg, #c0c0c0, #d3d3d3);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Mozilla styles */
+.slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(145deg, #d3d3d3, #c0c0c0);
+  border: 2px solid #999;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.slider:active::-moz-range-thumb {
+  transform: scale(1.3);
+  background: linear-gradient(145deg, #c0c0c0, #d3d3d3);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}

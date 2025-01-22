@@ -1,0 +1,115 @@
+.wrapper {
+  position: relative; /* Ensures the popup is positioned relative to the container */
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff; /* Default white background */
+  border-radius: 9999px; /* Pill-like shape */
+  padding: 0.75rem; /* Increased padding for bigger size */
+  width: 6rem; /* Increased width */
+  height: 3rem; /* Increased height */
+  transition: background-color 0.3s ease, border 0.3s ease; /* Smooth transition for hover effect */
+  border: 2px solid transparent; /* Default transparent border */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for a softer look */
+}
+
+.container:hover {
+  background-color: #e5e7eb; /* Tailwind's gray-200 on hover */
+  border: 2px solid rgba(156, 163, 175, 0.5); /* Soft gray border on hover */
+}
+
+.menuIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.75rem; /* More space between the menu and user icon */
+}
+
+.menuIconSize {
+  font-size: 1.75rem; /* Larger menu icon */
+  color: #333;
+}
+
+.bar {
+  flex-grow: 1;
+  background-color: #9ca3af; /* Tailwind's gray-400 */
+  height: 100%;
+  border-top-left-radius: 9999px;
+  border-bottom-left-radius: 9999px;
+}
+
+.circle {
+  width: 2.5rem; /* Larger circle */
+  height: 2.5rem; /* Adjusted size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e4242c; /* Red for emphasis */
+  border-radius: 9999px;
+  transition: background-color 0.3s ease, border 0.3s ease; /* Smooth transition for background and border on hover */
+  border: 2px solid transparent; /* Default transparent border */
+}
+
+.container:hover .circle {
+  background-color: #610d10; /* Darker red on hover */
+}
+
+.iconSize {
+  color: white;
+  font-size: 1.5rem; /* Larger user icon */
+}
+
+.popup {
+  position: absolute;
+  top: 100%; /* Positioned below the container */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff; /* White background for popup */
+  border: 1px solid #d1d5db; /* Light gray border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  padding: 1rem;
+  border-radius: 0.5rem; /* Rounded corners */
+  margin-top: 0.5rem; /* Space between container and popup */
+  z-index: 10; /* Ensures it appears above other elements */
+  width: 200px; /* Fixed width for popup */
+  text-align: center; /* Centers popup text */
+}
+
+.popup p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333; /* Text color */
+}
+
+.popup::before {
+  content: "";
+  position: absolute;
+  top: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0.5rem;
+  border-style: solid;
+  border-color: transparent transparent #ffffff transparent; /* Creates a triangle pointing to the container */
+}
+.menuList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menuItem {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #333; /* Default text color */
+  transition: background-color 0.2s ease, color 0.2s ease; /* Smooth hover effect */
+}
+
+.menuItem:hover {
+  background-color: #e5e7eb; /* Light gray background on hover */
+  color: #610d10; /* Dark red text on hover */
+  border-radius: 0.25rem; /* Slight rounding for hover highlight */
+}
