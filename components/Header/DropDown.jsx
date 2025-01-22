@@ -31,7 +31,10 @@ const Dropdown = ({ options, onSelect }) => {
 
   return (
     <div className={styles.dropdown} ref={dropdownRef}>
-      <button className={styles.toggleButton} onClick={handleToggle}>
+      <button
+        className={`${styles.toggleButton} ${isOpen ? styles.active : ""}`}
+        onClick={handleToggle}
+      >
         Menu
       </button>
       {isOpen && (
